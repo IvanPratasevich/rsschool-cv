@@ -48,7 +48,7 @@ compress("aaabcc");
 ```
 **Languages**: 
 * Russian (Native)
-* **English (B1+)**
+* **English (B1+,Streamline Test)**
 
 **Education**:
 
