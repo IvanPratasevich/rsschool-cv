@@ -1,3 +1,4 @@
+ul {padding-left:12px;}
 body{
   background-color: #DCDCDC;
 }
@@ -28,4 +29,24 @@ body{
   font-weight: bold;
   font-size: 25px;
   line-height: 25px;
+}
+.contacts{
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #212121;
+}
+.information_block{
+  
+}
+.block_contacts{
+  padding-left: 25px;
+}
+.information_tittle{
+  font-family: IBM Plex Sans;
+  font-style: normal;
+  font-size: 13px;
+  line-height: 15px;
+}
+.text_color{
+  color: #7a7a7a;
 }
