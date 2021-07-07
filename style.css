@@ -39,7 +39,7 @@ body{
   font-family: Hind;
   font-style: normal;
   font-weight: normal;
-  font-size: 12px;
+  font-size: 14px;
   line-height: 19px; 
 }
 .block_contacts{
@@ -74,4 +74,33 @@ body{
 }
 .code{
   border-bottom: 1px solid #e9e9e9;
+}
+.language_text{
+  font-family: Hind;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 19px; 
+}
+.languages{
+  border-bottom: 1px solid #e9e9e9;
+}
+.technologies__block{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  width: 50px;
+  background-image: url(images/box.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.technologies__wrapper{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  max-width: 280px;
+}
+.technologies__block:hover{
+  transform: scale(1.2);
 }
