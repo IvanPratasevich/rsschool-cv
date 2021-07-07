@@ -1,4 +1,5 @@
 ul {padding-left:12px;}
+a{text-decoration: none;color: #800;}
 body{
   background-color: #DCDCDC;
 }
@@ -6,7 +7,7 @@ body{
   margin: 20px auto;
   background-color: #FFFF;
   max-width: 515px;
-  height: 1200px;
+  min-height: 1200px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.2), inset 0 0 50px rgba(0, 0, 0, 0.1);
 }
 .wrapper{
@@ -103,4 +104,20 @@ body{
 }
 .technologies__block:hover{
   transform: scale(1.2);
+}
+.footer{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 40px;
+  padding-right: 40px;
+  font-family: IBM Plex Sans;
+  font-style: normal;
+  max-height: 100px;
+
+}
+.rs-school-logo{
+  text-align: center;
+  width: 100px;
+  height: 37px;
 }
