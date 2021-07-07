@@ -1,54 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="utf-8">
-	<meta content="width=device-width, initial-scale=1" name="viewport">
-	<title>CV</title>
-	<link href="style.css" rel="stylesheet" type="text/css">
-	<link href="normalize.css" rel="stylesheet" type="text/css">
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans" rel="stylesheet">
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Roboto" rel="stylesheet">
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <title>CV</title>
+  <link href="style.css" rel="stylesheet" type="text/css">
+  <link href="normalize.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans" rel="stylesheet">
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.0.1/styles/default.min.css">
 </head>
 <body>
-	<main>
-		<div class="container">
-			<div class="wrapper">
-				<header class="header">
-					<div class="header__wrapper">
-						<img src="images/avatar.png" alt="avatar" class="header-avatar">
-						<h1 class="header__tittle">Ivan Pratasevich</h1>
-					</div>
-				</header>
-				<section class="contacts">
-					<div class="information_block block_about-me information_tittle">
-						<h2>About me</h2>
-						<ul class="about-me__list text_color contatcs_text">
-							<li><strong>Marital status:</strong> Single</li>
-							<li><strong>Date of birth:</strong> 09.08.2001</li>
-							<li><strong>Brief information about myself:</strong><br>My main goal is to gain as much knowledge as possible in the field of Web-programming and become a front-end developer. I am stress-resistant, patient and most importantly, goal-oriented.
-							</li>
-						</ul>
-					</div>
-					<div class="information_block block_contacts information_tittle">
-						<h2>Contacts</h2>
-						<ul class="text_color contatcs_text">
-							<li><strong>Location:</strong><br>Minsk, Belarus</li>
-							<li><strong>Mail:</strong> iv.pratasevich@gmail.com</li>
-							<li><strong>Telegram:</strong> @iv_prot</li>
-						</ul>
-					</div>
-				</section>
-				<section class="education information_tittle">
-					<h2>Education</h2>
-					<h3 class="education_text">Physics Faculty, BSU <span class="education_dates text_color">2019-2021</span></h3>
-					<h3 class="education_text text_color">Physics (industrial activity) - Cooperative program of BSU (Belarusian State University) and DPU (Dalian Polytechnic University)</h3>
-				</section>
-		</div>
-		</div>
-	</main>
+  <main>
+    <div class="container">
+      <div class="wrapper">
+        <header class="header">
+          <div class="header__wrapper">
+            <img alt="avatar" class="header-avatar" src="images/avatar.png">
+            <h1 class="header__tittle">Ivan Pratasevich</h1>
+          </div>
+        </header>
+        <section class="contacts">
+          <div class="information_block block_about-me information_tittle">
+            <h2>About me</h2>
+            <ul class="about-me__list text_color contatcs_text">
+              <li><strong>Marital status:</strong> Single</li>
+              <li><strong>Date of birth:</strong> 09.08.2001</li>
+              <li><strong>Brief information about myself:</strong><br>
+              My main goal is to gain as much knowledge as possible in the field of Web-programming and become a front-end developer. I am stress-resistant, patient and most importantly, goal-oriented.</li>
+            </ul>
+          </div>
+          <div class="information_block block_contacts information_tittle">
+            <h2>Contacts</h2>
+            <ul class="text_color contatcs_text">
+              <li><strong>Location:</strong><br>
+              Minsk, Belarus</li>
+              <li><strong>Mail:</strong> iv.pratasevich@gmail.com</li>
+              <li><strong>Telegram:</strong> @iv_prot</li>
+            </ul>
+          </div>
+        </section>
+        <section class="education information_tittle">
+          <h2>Education</h2>
+          <h3 class="education_text">Physics Faculty, BSU <span class="education_dates text_color">2019-2021</span></h3>
+          <h3 class="education_text text_color">Physics (industrial activity) - Cooperative program of BSU (Belarusian State University) and DPU (Dalian Polytechnic University)</h3>
+        </section>
+        <section class="code information_tittle">
+          <h2>Example of code</h2>
+            <pre class=""><code class="javascript">function compress(str) {
+  let compressed = "";
+  arr = str.split("");
+  let obj = {};
+  for (i = 0; i < arr.length; i++) {
+    if (obj[arr[i]]) {
+      obj[arr[i]]++;
+    } else {
+      obj[arr[i]] = 1;
+    }
+  }
+  for (let key in obj) {
+    compressed = compressed + key + obj[key];
+  }
+  console.log(compressed);
+}
+compress("аааоыыыыыbccccttt");
+compress("a");
+compress("aaa");
+compress("aabbb");
+compress("aaabcc");</code>
+</pre>
+        </section>
+      </div>
+    </div>
+  </main>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.0.1/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>
 </body>
 </html>
