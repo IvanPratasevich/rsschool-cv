@@ -101,6 +101,7 @@ body{
   flex-direction: row;
   justify-content: space-between;
   max-width: 280px;
+  padding-left: 0px;
 }
 .technologies__block:hover{
   transform: scale(1.2);
