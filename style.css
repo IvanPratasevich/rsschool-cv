@@ -1,29 +1,40 @@
-ul {padding-left:12px;}
-a{text-decoration: none;color: #800;}
-body{
+html {
+  scroll-behavior: smooth;
+}
+ul {
+  padding-left: 12px;
+}
+a {
+  text-decoration: none;
+  color: #800;
+  transition: 1s;
+}
+body {
   background-color: #DCDCDC;
 }
-.container{
-  margin: 20px auto;
+.container {
+  margin: 0 auto;
+  position: relative;
+  margin-top: 15px;
+  margin-bottom: 15px;
   background-color: #FFFF;
-  max-width: 515px;
-  min-height: 1200px;
+  max-width: 900px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.2), inset 0 0 50px rgba(0, 0, 0, 0.1);
 }
-.wrapper{
+.wrapper {
   padding: 40px;
 }
-.header{
+.header {
   border-bottom: 1px solid #e9e9e9;
 }
-.header-avatar{
-   filter: grayscale(65%);
-   box-sizing: border-box;
+.header-avatar {
+  filter: grayscale(65%);
+  box-sizing: border-box;
 }
-.header__wrapper{
+.header__wrapper {
   max-width: 250px;
 }
-.header__tittle{
+.header__tittle {
   float: right;
   font-family: IBM Plex Sans;
   font-style: normal;
@@ -31,34 +42,34 @@ body{
   font-size: 25px;
   line-height: 25px;
 }
-.contacts{
-  display: flex;
-  justify-content: space-between;
+.about-myself {
   border-bottom: 1px solid #e9e9e9;
 }
-.contatcs_text {
+.contacts_text {
   font-family: Hind;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
-  line-height: 19px; 
+  line-height: 19px;
+  list-style-type: none;
+  padding-left: 0px;
 }
-.block_contacts{
+.block_contacts {
   padding-left: 25px;
 }
-.information_tittle{
+.information_tittle {
   font-family: IBM Plex Sans;
   font-style: normal;
   font-size: 13px;
   line-height: 15px;
 }
-.text_color{
+.text_color {
   color: #7a7a7a;
 }
-.education{
-    border-bottom: 1px solid #e9e9e9;
+.education {
+  border-bottom: 1px solid #e9e9e9;
 }
-.education_text{
+.education_text {
   display: flex;
   justify-content: space-between;
   font-family: IBM Plex Sans;
@@ -67,26 +78,26 @@ body{
   font-size: 14px;
   line-height: 18px;
 }
-.education_dates{
+.education_dates {
   font-family: Hind;
   font-style: normal;
   font-weight: normal;
   line-height: 18px;
 }
-.code{
+.code {
   border-bottom: 1px solid #e9e9e9;
 }
-.language_text{
+.language_text {
   font-family: Hind;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
-  line-height: 19px; 
+  line-height: 19px;
 }
-.languages{
+.languages {
   border-bottom: 1px solid #e9e9e9;
 }
-.technologies__block{
+.technologies__block {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -96,17 +107,17 @@ body{
   background-repeat: no-repeat;
   background-position: center;
 }
-.technologies__wrapper{
+.technologies__wrapper {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   max-width: 280px;
   padding-left: 0px;
 }
-.technologies__block:hover{
+.technologies__block:hover {
   transform: scale(1.2);
 }
-.footer{
+.footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -114,11 +125,167 @@ body{
   padding-right: 40px;
   font-family: IBM Plex Sans;
   font-style: normal;
-  max-height: 100px;
-
+  padding-bottom: 15px;
 }
-.rs-school-logo{
+.rs-school-logo {
   text-align: center;
   width: 100px;
   height: 37px;
+}
+.about-myself_text {
+  font-family: IBM Plex Sans;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+}
+.contacts {
+  border-bottom: 1px solid #e9e9e9;
+}
+.contacts__block1::before {
+  content: "🗺";
+  padding-right: 0.5em
+}
+.contacts__block2::before {
+  content: "📧";
+  padding-right: 0.5em
+}
+.contacts__block3::before {
+  content: "📨";
+  padding-right: 0.5em
+}
+section {
+  position: relative;
+}
+a:hover {
+  color: blueviolet;
+}
+section:hover .block__wrapper:after {
+  width: 100%;
+  background-color: blueviolet;
+}
+section:hover .block__wrapper:before {
+  width: 100%;
+}
+.block__wrapper:after {
+  content: "";
+  position: absolute;
+  width: 200px;
+  height: 1px;
+  background-color: #710707;
+  transition: 3s;
+}
+h2 {
+  margin-top: 15px;
+}
+.technologies {
+  border-bottom: 1px solid #e9e9e9;
+}
+.menu {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 0px;
+  font-family: IBM Plex Sans;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 18px;
+  list-style-type: none;
+  padding-left: 0px;
+}
+.header_item {
+  margin-top: 0px;
+  margin-bottom: 30px;
+}
+.menu-burger {
+  display: none;
+  height: 30px;
+  width: 30px;
+  background-image: url(images/menu.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.menu-burger-close {
+  display: none;
+  height: 30px;
+  width: 30px;
+  background-image: url(images/cross.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.open {
+  flex-direction: column;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 0px;
+  font-family: IBM Plex Sans;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 18px;
+  list-style-type: none;
+  padding-left: 0px;
+}
+pre {
+  margin: 0;
+}
+@media (max-width: 900px) {
+  .menu {
+    display: none;
+  }
+  .menu-burger {
+    display: block;
+  }
+  header {
+    margin-bottom: 20px;
+  }
+  .container {
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+}
+@media (max-width: 400px) {
+  .footer {
+    flex-direction: column;
+  }
+  .rs-school-logo {
+    margin-bottom: 20px;
+  }
+  .year {
+    margin-bottom: 20px;
+  }
+  .header__wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+  .header-avatar {
+    width: 49px;
+    height: 65px;
+  }
+}
+.cards-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.img {
+  margin: 0 auto;
+  background-size: cover;
+  max-width: 100%;
+  height: auto;
+}
+.project-name {
+  font-size: 16px;
+}
+.project-description {
+  font-size: 14px;
+}
+.card {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  margin-bottom: 20px;
 }

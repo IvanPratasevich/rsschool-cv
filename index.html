@@ -6,52 +6,91 @@
   <title>CV</title>
   <link href="style.css" rel="stylesheet" type="text/css">
   <link href="normalize.css" rel="stylesheet" type="text/css">
+  <link href="prism.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link href="https://fonts.gstatic.com" rel="preconnect">
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans" rel="stylesheet">
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link href="https://fonts.gstatic.com" rel="preconnect">
   <link href="https://fonts.googleapis.com/css2?family=Roboto" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.0.1/styles/default.min.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.0.1/styles/default.min.css"
+  rel="stylesheet">
 </head>
 <body>
   <main>
     <div class="container">
       <div class="wrapper">
-        <header class="header">
+        <header id="header">
+          <div class="menu-burger" id="menu-burger" onclick="burger()"></div>
+          <nav class="navigation" id="navigation">
+            <ul class="menu block_about-me information_tittle" id="menu">
+              <li class="header_item">
+                <a href="#about-myself">About myself</a>
+              </li>
+              <li class="header_item">
+                <a href="#contacts">Contacts</a>
+              </li>
+              <li class="header_item">
+                <a href="#education">Education</a>
+              </li>
+              <li class="header_item">
+                <a href="#code">Example of code</a>
+              </li>
+              <li class="header_item">
+                <a href="#languages">Languages</a>
+              </li>
+              <li class="header_item">
+                <a href="#skills">Skills</a>
+              </li>
+              <li class="header_item">
+                <a href="#projects">Projects</a>
+              </li>
+            </ul>
+          </nav>
+        </header>
+        <div class="header">
           <div class="header__wrapper">
             <img alt="avatar" class="header-avatar" src="images/avatar.png">
             <h1 class="header__tittle">Ivan Pratasevich</h1>
           </div>
-        </header>
-        <section class="contacts">
-          <div class="information_block block_about-me information_tittle">
-            <h2>About me</h2>
-            <ul class="about-me__list text_color contatcs_text">
-              <li><strong>Marital status:</strong> Single</li>
-              <li><strong>Date of birth:</strong> 09.08.2001</li>
-              <li><strong>Brief information about myself:</strong><br>
-              My main goal is to gain as much knowledge as possible in the field of Web-programming and become a front-end developer. I am stress-resistant, patient and most importantly, <mark>goal-oriented.</mark></li>
-            </ul>
-          </div>
-          <div class="information_block block_contacts information_tittle">
-            <h2>Contacts</h2>
-            <ul class="text_color contatcs_text">
-              <li><strong>Location:</strong><br>
-              Minsk, Belarus</li>
-              <li><strong>Mail:</strong> iv.pratasevich@gmail.com</li>
-              <li><strong>Telegram:</strong> @iv_prot</li>
-            </ul>
+        </div>
+        <section class="about-myself" id="about-myself">
+          <div class="block__wrapper">
+            <div class="information_block block_about-me information_tittle">
+              <h2>About myself</h2>
+              <h3 class="about-myself_text text_color">My main goal is to get as much knowledge,
+              skills and experience as possible to become<br>
+              a front-end developer. I am stress-resistant, patient and, most importantly,
+              purposeful.</h3>
+            </div>
           </div>
         </section>
-        <section class="education information_tittle">
-          <h2>Education</h2>
-          <h3 class="education_text">Physics Faculty, BSU (incomplete higher education) <span class="education_dates text_color">2019-2021</span></h3>
-          <h3 class="education_text text_color">Physics (industrial activity) - Cooperative program of BSU (Belarusian State University) and DPU (Dalian Polytechnic University)</h3>
+        <section class="contacts" id="contacts">
+          <div class="block__wrapper">
+            <div class="information_block block_about-me information_tittle">
+              <h2>Contacts</h2>
+              <ul class="text_color contacts_text contacts__list">
+                <li class="contacts__block1"><strong>Location:</strong> Minsk, Belarus</li>
+                <li class="contacts__block2"><strong>Mail:</strong> iv.pratasevich@gmail.com</li>
+                <li class="contacts__block3"><strong>Telegram:</strong> @iv_prot</li>
+              </ul>
+            </div>
+          </div>
         </section>
-        <section class="code information_tittle">
-          <h2>Example of code</h2>
-            <pre class=""><code class="javascript">function compress(str) {
+        <section class="education information_tittle" id="education">
+          <div class="block__wrapper">
+            <h2>Education</h2>
+            <h3 class="education_text">Physics Faculty, BSU (incomplete higher education)
+            <span class="education_dates text_color">2019-2021</span></h3>
+            <h3 class="education_text text_color">Physics (industrial activity) - Cooperative
+            program of BSU (Belarusian State University) and DPU (Dalian Polytechnic
+            University)</h3>
+          </div>
+        </section>
+        <section class="code information_tittle" id="code">
+          <div class="block__wrapper">
+            <h2>Example of code</h2>
+            <pre class=""><code class="language-javascript">function compress(str) {
   let compressed = "";
   arr = str.split("");
   let obj = {};
@@ -71,44 +110,81 @@ compress("аааоыыыыыbccccttt");
 compress("a");
 compress("aaa");
 compress("aabbb");
-compress("aaabcc");</code>
+compress("aaabcc");
+</code>
 </pre>
+          </div>
         </section>
-        <section class="languages information_tittle">
-          <h2>Languages</h2>
-          <ul class="text_color language_text">
-            <li>Russian (Native)</li>
-            <li><mark>English (B1+,Streamline Test)</mark></li>
-          </ul>
+        <section class="languages information_tittle" id="languages">
+          <div class="block__wrapper">
+            <h2>Languages</h2>
+            <ul class="text_color language_text">
+              <li>Russian (Native)</li>
+              <li><mark>English (B1)</mark></li>
+            </ul>
+          </div>
         </section>
-        <section class="technologies information_tittle">
-          <h2>Skills</h2>
-          <ul class="technologies__wrapper">
-            <li class="technologies__block">
-              <img src="images/logos-figma.svg" alt="Figma" title="Figma">
-            </li>
-            <li class="technologies__block">
-              <img src="images/logos-html-5.svg" alt="HTML" title="HTML">
-            </li>
-            <li class="technologies__block">
-              <img src="images/logos-css-3.svg" alt="CSS" title="CSS">
-            </li>
-            <li class="technologies__block">
-              <img src="images/logos-java.svg" alt="JavaScript" title="JavaScript">
-            </li>
-          </ul>
+        <section class="technologies information_tittle" id="skills">
+          <div class="block__wrapper">
+            <h2>Skills</h2>
+            <ul class="technologies__wrapper">
+              <li class="technologies__block"><img alt="Figma" src="images/logos-figma.svg" title=
+              "Figma"></li>
+              <li class="technologies__block"><img alt="HTML" src="images/logos-html-5.svg" title=
+              "HTML"></li>
+              <li class="technologies__block"><img alt="CSS" src="images/logos-css-3.svg" title=
+              "CSS"></li>
+              <li class="technologies__block"><img alt="JavaScript" src="images/logos-java.svg"
+              title="JavaScript"></li>
+            </ul>
+          </div>
+        </section>
+        <section class="information_tittle" id="projects">
+          <div class="block__wrapper">
+            <h2>Projects</h2>
+            <div class="cards-container">
+              <a href=
+              "https://rolling-scopes-school.github.io/ivanpratasevich-JSFEPRESCHOOL/drum-kit"
+              target="_blank">
+              <div class="card">
+                <img class="img" height="285" src="images/drum-kit.png" alt="Drum-kit" width="440">
+                <h3 class="project-name">Drum kit</h3>
+                <h4 class="project-description text_color">Drum Kit is a music application in which
+                you can play sounds by pressing keys on the keyboard. Each key has its own
+                sound.</h4>
+              </div></a> <a href=
+              "https://rolling-scopes-school.github.io/ivanpratasevich-JSFEPRESCHOOL/photofilter"
+              target="_blank">
+              <div class="card">
+                <img class="img" height="285" src="images/photofilter.png" alt="Photofilter" width="440">
+                <h3 class="project-name">Photofilter</h3>
+                <h4 class="project-description text_color">Photofilter is a photo editor that allows
+                you to edit images by applying various properties and filters to them.</h4>
+              </div></a> <a href=
+              "https://rolling-scopes-school.github.io/ivanpratasevich-JSFEPRESCHOOL/museum"
+              target="_blank">
+              <div class="card">
+                <img class="img" height="285" src="images/museum.png" alt="Museum" width="440">
+                <h3 class="project-name">Museum</h3>
+                <h4 class="project-description text_color">The site of the Louvre - one of the
+                largest and most popular art museums in the world.</h4>
+              </div></a>
+            </div>
+          </div>
         </section>
       </div>
       <footer class="footer">
         <div class="rs-school-logo">
-            <a href="https://rs.school/js/"><img src="images/rs_school_js.svg" alt="The Rolling Scopes School" title="The Rolling Scopes School"></a>
-        </div>
-        <span>2021</span>
-        <span><a href="https://github.com/ivanpratasevich">GitHub</a></span>
+          <a class="link" href="https://rs.school/js/"><img alt="The Rolling Scopes School" src=
+          "images/rs_school_js.svg" title="The Rolling Scopes School"></a>
+        </div><span class="year">2021</span> <span><a href=
+        "https://github.com/ivanpratasevich" target="_blank">GitHub</a></span>
       </footer>
     </div>
   </main>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.0.1/highlight.min.js"></script>
-<script>hljs.highlightAll();</script>
+  <script src="prism.js">
+  </script> 
+  <script src="script.js">
+  </script>
 </body>
 </html>
